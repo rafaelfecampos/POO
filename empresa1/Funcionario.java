@@ -7,10 +7,15 @@ public class Funcionario
     private int nFilhos;
 
     //construtor
-    public Funcionario()
+    public Funcionario(String vNome, double vSalBruto, boolean vVale, boolean vGerente, int vNumFilhos)
     {
+        // inicializa variáveis de instância
+        nome = vNome;
+        salarioBruto = vSalBruto;
+        usaValeTransporte = vVale;
+        ehGerente = vGerente;
+        nFilhos = vNumFilhos;
     }
-    
     //Metodos de acesso
     public String getNome(){
         return nome;
@@ -21,40 +26,6 @@ public class Funcionario
             this.nome = nome;
         }
     }
-    
-    public int getNFilhos(){
-        return nFilhos;
-    }
-    public void setNFilhos(int nFilhos){
-        if(nFilhos >=0){
-            this.nFilhos = nFilhos;
-        }
-    }
-    
-    public double getSalarioBruto(){
-        return salarioBruto;
-    }
-    public void setSalarioBruto(double salarioBruto){
-        if(salarioBruto>=0){
-            this.salarioBruto = salarioBruto;
-        }
-    }
-    
-    public boolean getUsaValeTransporte(){
-        return usaValeTransporte;
-    }
-    public void setUsaValeTransporte(boolean usaValeTransporte){
-        this.usaValeTransporte=usaValeTransporte;
-    }
-    
-    public boolean getEhGerente(){
-        return ehGerente;
-    }
-    public void setEhGerente(boolean ehGerente){
-        this.ehGerente=ehGerente;
-    }
-    
-    //Metodos
     public double salarioLiquido()
     {
         // escreva seu código aqui
